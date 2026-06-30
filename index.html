@@ -1,441 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Lancelix | Inteligência para Leilões</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Inter,sans-serif;
-}
-
-body{
-
-background:#071321;
-color:white;
-
-}
-
-header{
-
-padding:25px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-}
-
-.logo{
-
-font-size:34px;
-font-weight:800;
-letter-spacing:1px;
-
-}
-
-.logo span{
-
-color:#25d366;
-
-}
-
-nav a{
-
-color:white;
-text-decoration:none;
-margin-left:35px;
-font-weight:500;
-
-}
-
-.hero{
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 8%;
-gap:70px;
-flex-wrap:wrap;
-
-}
-
-.hero-text{
-
-flex:1;
-min-width:320px;
-
-}
-
-.tag{
-
-display:inline-block;
-background:#12334f;
-color:#48d597;
-padding:10px 20px;
-border-radius:40px;
-margin-bottom:25px;
-font-size:14px;
-font-weight:600;
-
-}
-
-.hero h1{
-
-font-size:58px;
-line-height:1.1;
-margin-bottom:25px;
-
-}
-
-.hero h1 span{
-
-color:#27d56a;
-
-}
-
-.hero p{
-
-font-size:20px;
-line-height:1.8;
-opacity:.9;
-margin-bottom:35px;
-
-}
-
-.buttons{
-
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-
-}
-
-.btn{
-
-background:#25D366;
-color:white;
-padding:18px 34px;
-border-radius:12px;
-text-decoration:none;
-font-weight:700;
-transition:.3s;
-
-}
-
-.btn:hover{
-
-transform:translateY(-3px);
-
-}
-
-.btn2{
-
-background:transparent;
-border:1px solid rgba(255,255,255,.15);
-
-}
-
-.card{
-
-flex:1;
-min-width:350px;
-background:#0d1f33;
-padding:45px;
-border-radius:25px;
-box-shadow:0 30px 80px rgba(0,0,0,.35);
-
-}
-
-.card h3{
-
-font-size:28px;
-margin-bottom:20px;
-
-}
-
-.card ul{
-
-list-style:none;
-
-}
-
-.card li{
-
-padding:18px 0;
-border-bottom:1px solid rgba(255,255,255,.08);
-font-size:18px;
-
-}
-
-section{
-
-padding:90px 8%;
-
-}
-
-.title{
-
-font-size:42px;
-margin-bottom:60px;
-text-align:center;
-
-}
-
-.grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-
-}
-
-.box{
-
-background:#0d1f33;
-padding:35px;
-border-radius:18px;
-
-}
-
-.box h4{
-
-margin-bottom:20px;
-font-size:22px;
-color:#25D366;
-
-}
-
-.box p{
-
-opacity:.85;
-line-height:1.8;
-
-}
-
-.launch{
-
-text-align:center;
-background:linear-gradient(120deg,#0d1f33,#122e49);
-padding:100px 8%;
-
-}
-
-.launch h2{
-
-font-size:52px;
-margin-bottom:20px;
-
-}
-
-.launch p{
-
-font-size:22px;
-opacity:.9;
-max-width:800px;
-margin:auto auto 45px;
-
-}
-
-footer{
-
-padding:40px;
-text-align:center;
-opacity:.7;
-
-}
-
-@media(max-width:900px){
-
-.hero h1{
-
-font-size:42px;
-
-}
-
-.hero{
-
-padding-top:40px;
-
-}
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#071321;color:#fff}
+header{padding:25px 8%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:34px;font-weight:800}.logo span{color:#25D366}
+nav a{color:#fff;text-decoration:none;margin-left:30px}
+.hero{display:flex;justify-content:space-between;align-items:center;padding:80px 8%;gap:60px;flex-wrap:wrap}
+.hero-text{flex:1;min-width:320px}
+.tag{display:inline-block;background:#12334f;color:#48d597;padding:10px 18px;border-radius:30px;margin-bottom:20px}
+h1{font-size:56px;line-height:1.1;margin-bottom:20px} h1 span{color:#25D366}
+.hero p{font-size:20px;line-height:1.7;margin-bottom:30px;opacity:.9}
+.buttons{display:flex;gap:20px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:16px 28px;border-radius:12px;text-decoration:none;font-weight:700;transition:.3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(37,211,102,.35)}
+.btn2{background:transparent;border:1px solid rgba(255,255,255,.2)}
+.card{flex:1;min-width:320px;background:#0d1f33;padding:40px;border-radius:20px}
+.card li{list-style:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+section{padding:80px 8%}
+.title{text-align:center;font-size:42px;margin-bottom:50px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.box{background:#0d1f33;padding:30px;border-radius:18px}
+.box h4{color:#25D366;margin-bottom:15px}
+.launch{text-align:center;background:linear-gradient(120deg,#0d1f33,#122e49)}
+.launch h2{font-size:48px;margin-bottom:20px}
+.launch p{max-width:800px;margin:0 auto 35px;font-size:20px}
+footer{text-align:center;padding:35px;opacity:.7}
+.whatsapp-float{position:fixed;right:25px;bottom:25px;width:65px;height:65px;background:#25D366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.35)}
+@media(max-width:900px){h1{font-size:40px}}
 </style>
-
 </head>
-
 <body>
-
-<header>
-
-<div class="logo">
-Lancel<span>ix</span>
-</div>
-
-<nav>
-
-<a href="#">Início</a>
-<a href="#sobre">Sobre</a>
-<a href="#lancamento">Lançamento</a>
-
-</nav>
-
-</header>
-
+<header><div class="logo">Lancel<span>ix</span></div><nav><a href="#">Início</a><a href="#sobre">Sobre</a><a href="#lancamento">Lançamento</a></nav></header>
 <section class="hero">
-
 <div class="hero-text">
-
-<div class="tag">
-🚀 Plataforma em desenvolvimento
-</div>
-
-<h1>
-A inteligência que decide o <span>lance certo.</span>
-</h1>
-
-<p>
-
-Estamos construindo a primeira plataforma brasileira especializada em Inteligência Artificial para análise de lotes de leilões de eletrônicos.
-
-Transformamos horas de pesquisa em minutos de análise para que compradores tomem decisões com muito mais segurança.
-
-</p>
-
+<div class="tag">🚀 Plataforma em desenvolvimento</div>
+<h1>A inteligência que decide o <span>lance certo.</span></h1>
+<p>Estamos construindo a primeira plataforma brasileira especializada em Inteligência Artificial para análise de lotes de leilões de eletrônicos. Transformamos horas de pesquisa em minutos de análise para que compradores tomem decisões com muito mais segurança.</p>
 <div class="buttons">
-
-<a class="btn" target="_blank"
-href="https://wa.me/5512997151994?text=Olá!%20Vim%20através%20do%20site%20da%20Lancelix%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20lançamento%20da%20plataforma.">
-
-Quero conhecer
-
-</a>
-
-<a class="btn btn2">
-
-Lançamento em breve
-
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>O que a Lancelix faz?</h3>
-
-<ul>
-
-<li>📊 Analisa lotes automaticamente</li>
-
-<li>🤖 Inteligência Artificial especializada</li>
-
-<li>📈 Calcula valor real dos produtos</li>
-
-<li>💰 Recomenda o lance máximo</li>
-
-<li>⚠️ Calcula riscos e margem</li>
-
-<li>📑 Gera relatório executivo profissional</li>
-
-</ul>
-
-</div>
-
+<a class="btn" target="_blank" href="https://wa.me/5512997151994?text=Olá!%20Vim%20através%20do%20site%20da%20Lancelix%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20lançamento%20da%20plataforma."><i class="fa-brands fa-whatsapp"></i>Falar no WhatsApp</a>
+<a class="btn btn2">Lançamento em breve</a>
+</div></div>
+<div class="card"><h3>O que a Lancelix faz?</h3><ul><li>📊 Analisa lotes automaticamente</li><li>🤖 Inteligência Artificial especializada</li><li>📈 Calcula valor real dos produtos</li><li>💰 Recomenda o lance máximo</li><li>⚠️ Calcula riscos e margem</li><li>📑 Gera relatório executivo profissional</li></ul></div>
 </section>
-
-<section id="sobre">
-
-<h2 class="title">
-Muito mais que uma pesquisa de preços
-</h2>
-
-<div class="grid">
-
-<div class="box">
-
-<h4>Inteligência</h4>
-
-<p>
-
-Utilizamos IA e automação para transformar milhares de dados em decisões inteligentes.
-
-</p>
-
-</div>
-
-<div class="box">
-
-<h4>Velocidade</h4>
-
-<p>
-
-O que hoje leva horas para ser analisado poderá ser feito em poucos minutos.
-
-</p>
-
-</div>
-
-<div class="box">
-
-<h4>Segurança</h4>
-
-<p>
-
-Reduza riscos, compre melhor e aumente sua margem de lucro antes mesmo de realizar um lance.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="launch" id="lancamento">
-
-<h2>
-
-Lançamento em breve
-
-</h2>
-
-<p>
-
-Estamos finalizando a plataforma e selecionando os primeiros usuários que terão acesso antecipado.
-
-Se você deseja conhecer a Lancelix antes do lançamento oficial, fale conosco pelo WhatsApp.
-
-</p>
-
-<a class="btn"
-target="_blank"
-href="https://wa.me/5512997151994?text=Olá!%20Tenho%20interesse%20em%20participar%20do%20lançamento%20da%20Lancelix.">
-
-Entrar na lista de espera
-
-</a>
-
-</section>
-
-<footer>
-
-© 2026 Lancelix • Inteligência para Leilões
-
-</footer>
-
-</body>
-</html>
+<section id="sobre"><h2 class="title">Muito mais que uma pesquisa de preços</h2><div class="grid"><div class="box"><h4>Inteligência</h4><p>Utilizamos IA e automação para transformar milhares de dados em decisões inteligentes.</p></div><div class="box"><h4>Velocidade</h4><p>O que hoje leva horas pode ser feito em minutos.</p></div><div class="box"><h4>Segurança</h4><p>Reduza riscos e aumente sua margem antes do lance.</p></div></div></section>
+<section id="lancamento" class="launch"><h2>Lançamento em breve</h2><p>Estamos selecionando os primeiros usuários da plataforma.</p><a class="btn" target="_blank" href="https://wa.me/5512997151994?text=Olá!%20Tenho%20interesse%20em%20participar%20do%20lançamento%20da%20Lancelix."><i class="fa-brands fa-whatsapp"></i>Entrar na lista de espera</a></section>
+<footer>© 2026 Lancelix • Inteligência para Leilões</footer>
+<a class="whatsapp-float" target="_blank" href="https://wa.me/5512997151994?text=Olá!%20Vim%20através%20do%20site%20da%20Lancelix."><i class="fa-brands fa-whatsapp"></i></a>
+</body></html>
